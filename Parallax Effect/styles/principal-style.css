@@ -1,0 +1,50 @@
+@import url(header.css);
+@import url(parallax.css);
+@import url(footer.css);
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Tangerine:wght@400;700&display=swap'); /*Tangerine*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Shippori+Mincho&family=Tangerine:wght@400;700&display=swap'); /*Shippori-Mincho*/
+@import url('https://fonts.googleapis.com/css2?family=Junge&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Shippori+Mincho&family=Tangerine:wght@400;700&display=swap'); /*Junge*/
+@import url('https://fonts.googleapis.com/css2?family=Junge&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shippori+Mincho&family=Tangerine:wght@400;700&display=swap'); /*Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap'); /*inter*/
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "shippori-mincho";
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #F5F5F5;
+    min-height: 100vh;
+}
+
+.whats img{
+    display: flex;
+    position: fixed;
+    bottom: 1%;
+    right: .8rem;
+    width: 3.2rem;
+    transition: .4s;
+    z-index: 5;
+}
+
+.whats img:hover{
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 426px) {
+    .whats img{
+        width: 2.5rem;
+    }
+}

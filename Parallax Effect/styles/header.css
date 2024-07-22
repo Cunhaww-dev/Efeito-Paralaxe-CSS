@@ -1,0 +1,146 @@
+.header{
+    text-decoration: none;
+    backdrop-filter: blur(50px); 
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between; /*Espaçamento entre tags dentro do Header (Logo e Navbar)*/
+    align-items: center;
+    width: 100%;
+    padding: 1rem 10%;
+    z-index: 1000;
+}
+
+.header::before{
+    backdrop-filter: blur(50px);
+    background-color: rgb(5, 7, 37);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    color: #f0f0f0;
+    width: 4rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.logop{
+    align-items: center;
+    justify-content: center;
+    color: var(--color-neutral-40);
+    cursor: default;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+#checkbox{
+    display: none;
+}
+
+.icones{
+    display: none;
+    position: absolute;
+    right: 5%;
+    font-size: 2rem;
+    color: #f0f0f0;
+    cursor: pointer;
+}
+
+.nav-bar a{
+    margin-left: 2.2rem;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #f0f0f0;
+    transition: color .3s;
+    text-decoration: none;
+}
+
+.nav-bar a:hover{
+    color: #f0f0f0a8;
+}
+
+/* BREAKPOINT MEDIA QUERY */
+@media (max-width: 992px){
+    .header{
+        padding: 1.2rem 5%;
+    }
+
+    div.text-curiosidade{
+        padding: 1.2rem 0;
+    }
+
+    div.text-curiosidade p{
+        padding: 0 5rem 1.2rem;
+    }
+
+    div.text-curiosidade h2{
+        margin: .8rem 1.2rem 2.5rem;
+    }
+}
+
+@media (max-width: 768px){
+    .icones{
+        display: inline-flex;
+    }
+
+    #checkbox:checked ~ .icones #icone-menu{
+        display: none;
+    }
+
+    .icones #icone-x{
+        display: none;
+    }
+
+    #checkbox:checked ~ .icones #icone-x{
+        display: block;
+    }
+
+    #checkbox:checked ~ .nav-bar{
+        border-top: 1px solid var(--color-neutral-30);
+    }
+
+    .nav-bar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color:  rgb(5, 7, 37);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+        transition: .5s ease;
+    }
+
+    #checkbox:checked ~ .nav-bar{
+        height: 12.8rem;
+    }
+
+    .nav-bar a{
+        display: block;
+        font-size: 1.15rem;
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+    
+    div.text-curiosidade{
+        padding: 1.2rem 0;
+    }
+
+    div.text-curiosidade p{
+        padding: 0 5rem;
+    }
+
+    div.text-curiosidade h2{
+        margin: .8rem 1.2rem 2.5rem;
+    }
+}
